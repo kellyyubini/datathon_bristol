@@ -58,7 +58,7 @@ def initialize_topic_model(embedding_model):
     # UMAP mejorado
     umap_model = UMAP(
         n_neighbors=20,
-        n_components=20,  # Más dimensiones
+        n_components=20,  
         min_dist=0.0,
         metric="cosine",
         random_state=42,
@@ -239,7 +239,7 @@ def create_visualization(topic_results, topic_info, embedding_model, output_dir)
 
 def main():
     print("Loading data...")
-    df, texts = load_data("problem1_2021_finance.csv")
+    df, texts = load_data("data/Data_results_ollama/only_financial_data.csv")
     print(f"Loaded {len(texts)} documents")
     
     print("Creating embeddings...")
